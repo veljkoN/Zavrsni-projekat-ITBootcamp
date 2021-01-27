@@ -1,6 +1,6 @@
 
 
-#Click here → [Create React App](https://github.com/facebook/create-react-app). to see application hosted on web
+# Click here → **[G-Info](https://g-info-fa50e.web.app/)** to see application hosted on web
 
 ## Available Scripts
 
