@@ -2,7 +2,7 @@
 
 # Click here → **[G-Info](https://g-info-fa50e.web.app/)** to see application hosted on web
 
-## Available Scripts
+## About app
 
 In the project directory, you can run:
 
