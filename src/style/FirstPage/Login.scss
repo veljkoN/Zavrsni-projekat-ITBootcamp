@@ -1,0 +1,104 @@
+@import '../variables.scss';
+.join-main-section{
+    background: linear-gradient(#b2f5f3,#f5c2ca);
+    border-radius: 3px;
+    padding: 4rem 3rem 2rem 3rem;
+    position: relative;
+    .join-form{
+        display: flex;
+        flex-direction: column;
+    }
+    h2{
+        font-weight: lighter;
+        color: $l-coral;
+        background-color: transparent;
+        overflow: hidden;
+        font-size:30px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        top: -2rem;
+        left:0;
+        margin-bottom: 1rem;
+    }
+    svg{
+        fill:rgb(153, 80, 80) ;
+    }
+    p{
+        text-align: right;
+        vertical-align: center;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        text-decoration: underline;
+        color: $br-text;
+        cursor: pointer;
+    }
+    .input-group {
+        input{
+            width: 16rem;
+            height: 2rem;
+            background: rgb(248, 227, 227);
+            outline: none;
+            font-weight: lighter;
+            font-size: 14px;
+            margin-bottom: 10px;
+            border: 0px;
+            border: 0;
+            &::placeholder{
+                color: rgb(56, 29, 56);
+                padding-left: 1rem;
+            }
+            &:focus{
+                background-color: white;
+                color:  rgb(56, 29, 56);
+            }
+        }
+        .login-btn {
+           @include btn
+         }
+    }
+    .error-box{
+        height: 3rem;
+        margin-top: 0.5rem;
+        width: 16rem;
+        .errorMessage{
+            color: red;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+    }
+}
+@media (min-width:320px) and (max-width:480px){
+    .join-main-section{
+        border: none;
+        padding: 0;
+        margin-top: 4rem;
+        h2{
+            font-size: 24px;
+        }
+        .join-form{
+            .input-group input{
+                width: 14rem;
+                margin-left:1rem;
+            }
+            .login-btn{
+                width: 14rem;
+                margin-left:1rem;
+            }
+        }
+        p{
+            right: 32px;
+        }
+    }
+}
+@media (min-width:481px) and (max-width:768px){
+    .welcome-box .welcome-text-login {
+        margin-top: 12rem;
+        margin-bottom: 4rem;
+    }
+    .join-main-section{
+        margin-top: 2rem;
+        margin-bottom: 6rem;
+    }
+}

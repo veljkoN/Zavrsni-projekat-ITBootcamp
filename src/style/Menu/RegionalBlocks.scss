@@ -1,0 +1,118 @@
+.regional-box{
+    max-width: 1024px;
+    height: 132vh;
+    margin: 0 auto;  
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-around;
+    position: relative;
+    .block-header{
+        position: absolute;
+        margin:1rem;
+        font-family: 'Amaranth', sans-serif;
+    }
+    .regional-section{
+        background-color: #a9c9c7;
+        margin-left: 8rem;
+        width: 24rem;
+        padding: 2rem;
+        margin-top: 6rem;
+        height: 36rem;
+        ul{
+            list-style: none;
+            li{
+                padding: 0.2rem;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
+                a{
+                    text-decoration: none;
+                    color: rgb(77, 75, 75);
+                    &:hover{
+                        text-decoration: underline;
+                        color: darkgray;
+                    }
+                }
+            }
+        }
+        .regional-pagination{
+            position: relative;
+            margin: 1rem 0;
+        }
+    }
+    #regionalB{
+        width: 60%;
+    }
+    .regional-desc{
+        margin:80px  auto;
+        width: 35%;
+        margin-left: 2rem;
+        padding: 12px;
+        h2{
+            margin-bottom: 1rem;
+        } 
+        .block-text{
+            float: left;
+            text-align: justify;
+        }
+    }
+} 
+.block-img{
+    position: absolute;
+    margin-left: 1rem;
+    width: 120px;
+    height: 80px;
+    padding: 0 10px 0 0;
+    border: 1px solid rgb(124, 123, 123);
+    padding: 1px;
+    box-shadow: 1px 2px 2px 1px rgb(95, 86, 86);
+}
+@media (min-width:320px) and (max-width:480px){
+    .regional-box{
+        height: 200vh;
+        flex-direction: column;
+        align-items: center;
+        .block-header{
+            top: 2rem;
+        }
+        .regional-section{
+            margin-left: 0;
+            width: 75%;
+            .block-img{
+                display: none;
+            }
+        }
+        .regional-desc{
+            width: 75%;  
+            height: 36rem;
+            margin: 0 auto;
+        }
+    }
+}
+@media (min-width:481px) and (max-width:768px){
+    .regional-box{
+        height: 190vh;
+        flex-direction: column;
+        align-items: center;
+        .block-header{
+            top: 2rem;
+        }
+        .regional-section{
+            margin-left: 0;
+            width: 75%;
+        }
+        .regional-desc{
+            width: 75%;  
+            height: 36rem;
+            margin: 0 auto;
+        }
+    }
+}
+@media (min-width:1440px){
+    .regional-box{
+        height: 120vh;
+    }
+}

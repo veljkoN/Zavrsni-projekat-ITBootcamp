@@ -1,0 +1,64 @@
+@import '../variables.scss';
+.modal-box{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    .modal{
+        position: relative;
+        max-width: 800px;
+        img{
+            max-width: 100%;
+            display: block;
+        }
+    }
+    h2{
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #333;
+    } 
+    button{
+        position: relative;
+        padding: 5px 20px;
+        display: inline-block;
+        margin-top: 20px;
+        text-decoration:none;
+        color:#fff;
+        background-color: #111;
+    }
+    .popup{
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 40%;
+        padding: 50px;
+        box-shadow: 0 5px 30px rgba(0,0,0,.30);
+        background-color: #fff;
+        text-align: center;
+        z-index: 6;
+        opacity: 1;
+        transform: opacity(1);
+        transition: all 3000 ease;
+    }
+}
+.hi-msg{
+    color: $pink-text;
+}
+@media (min-width:320px) and (max-width:480px){
+    .modal-box{
+        .popup{
+            width: 90%;
+        }
+    }
+}
+@media (min-width:481px) and (max-width:768px){
+    .modal-box{
+        .popup{
+            width: 60%;
+        }
+    }
+}

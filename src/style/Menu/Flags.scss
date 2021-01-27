@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery{
+    
+   
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 6rem;
+    margin-right: 3rem;
+    margin-top: 6rem;
+   
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit,minmax(10rem, 9.5rem));
+    grid-auto-rows: 6rem;
+    grid-gap: 0.5rem;
+    background-color: #e3e4e4;
+    box-shadow: 0px 3px 4px 0px rgb(143, 142, 142);
+    border-radius: 3px;
+    padding: 8rem 3rem 6rem 3rem;
+    margin-bottom: 3rem!important;
+   h2{
+       position: absolute;
+       top: -3rem;
+       right: 42%;
+       font-family: 'Amaranth', sans-serif;
+   }
+   .flag-search-box{
+       position: absolute;
+       top:  2rem;
+       left: 6rem;
+       display: flex;
+       flex-direction: column;
+   }
+    .country-search-flag{
+        top: 8.5rem;
+        left: 7.3rem;
+        width: 14rem;
+        height: 2rem;
+       
+        outline: none;
+        font-weight: lighter;
+        font-size: 14px;
+        margin-bottom: 10px;
+        border: 0px;
+        border: 0;
+        &::placeholder{
+            color: rgb(77, 75, 75);
+            padding-left: 1rem;
+        }
+        &:focus{
+            background-color: white;
+            color:  rgb(56, 29, 56);
+        }
+    }
+    .gallery-group{
+        position: relative;
+        box-shadow: 3px 2px  2px gray;
+        border: 1px solid lightgray;
+        padding: 1px;
+        .gallery-img{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            object-fit: cover;
+            border-radius: 0.2rem;
+            cursor: pointer;
+        }
+        .gallery-icons{
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            background: linear-gradient(to top,
+            rgba(0,0,0,0.6) 0%,
+            rgba(0,0,0,0.3) 100%);
+            width: 100%;   
+            padding: 0.2rem;
+            opacity: 0;
+            transition: opacity 200ms ease-in-out;
+            .svg-icon{
+                width: 1rem;
+                fill: lightgray;
+                cursor: pointer;
+                transform: translateY(0.5rem);
+                opacity: 0;
+                transition: 
+                    transform 200ms ease-in-out,
+                    opacity 200ms ease-in-out;
+                &:hover{
+                    fill: white;
+                }
+                &:nth-child(3){
+                    transition-delay: 0.1s;
+                }
+            }
+            .country-name{
+                color: white;
+            }
+        }
+        &:hover >.gallery-icons{
+            opacity: 1;
+        }
+        &:hover >.gallery-icons svg{
+            opacity: 1;
+            transform: translateY(0rem);
+        }
+        
+    }
+    .flag-pagination{
+       margin-top: 1rem;
+    }
+}
+.loading-box{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width:320px) and (max-width:480px){
+    .gallery{
+       background-color: inherit;
+       box-shadow: none;
+        .flag-search-box{
+            position: static;
+            .country-search-flag{
+                width: 11rem;
+            }
+        }
+        .flag-pagination{
+            margin-top: 3rem;
+            margin-right: 2rem!important;
+        }
+    }
+}
+@media (min-width:481px) and (max-width:568px){
+    
+}
+@media (min-width:569px) and (max-width:729px){
+    
+}
+@media (min-width:730px) and (max-width:890px){
+   
+}
+@media (min-width:891px) and (max-width:1015px){
+    
+}
+@media (min-width:1050px) and (max-width:1440px){
+    .gallery{
+       
+        .flag-pagination{
+            position: relative;
+            left: 170px;
+            margin-top: 7rem;
+        }
+    }
+}
+@media (min-width:1320px){
+    .gallery{
+        height: 140vh;
+        /*.flag-pagination{
+            position: relative;
+            left: -170px;
+            margin-top: 7rem;
+        }*/
+    }
+}
+
+
+
+
+
+

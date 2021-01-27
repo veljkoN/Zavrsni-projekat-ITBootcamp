@@ -1,0 +1,47 @@
+.user-profile-box{
+    max-width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 12rem;
+    margin-bottom: 2rem;
+    .profile{
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        width: 70%;
+        padding: 3rem;
+        background-color: lightgray;
+        border: 1px solid gray;
+        border-radius: 1%;
+        box-shadow: 1px 4px 3px 0px lightgray;
+        position: relative;
+        align-items: center;
+        img{
+            width: 12rem;
+        }
+    }
+}
+@media (max-width:1000px){
+    .user-profile-box{
+        margin-top: 6rem;
+        .profile{
+            background-color: inherit;
+            border: 0;
+            box-shadow: none;
+            img{
+                width: 8rem;
+            }
+        }
+    }
+}
+@media (max-width:1000px){
+    .user-profile-box{
+        .profile{
+            flex-direction: column;
+            img{
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}

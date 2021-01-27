@@ -1,0 +1,123 @@
+@import './variables';
+.logo{
+    width: 68px;
+    height: 68px;
+}
+.logo-text{
+    text-shadow:
+    #343b3c 0px 0px 0px,
+    #343b3c 1px 1px 0px,
+    #343b3c 2px 2px 0px,
+    #92a6a8 3px 3px 0px;
+    font-size: 22px; 
+    color: #DC3A80;
+    border-radius: 0%;
+}
+.nav{ 
+    position: absolute;
+    top: 0px;
+    z-index: 5;
+}
+.nav-expand{
+    display: none;
+}
+.nav-expand:hover{
+    fill: rgb(145, 144, 144);
+}
+.nav-list{
+    background: linear-gradient(#4eece7, rgb(248, 125, 178));
+    padding: 1rem 0;
+    width: 5rem;
+    height: 100%;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    transform: translate(0);
+    transition: transform 400ms ease-in-out;
+    .nav-item{
+        list-style: none;
+        font-size: 0.7rem;
+        text-align: center;
+        margin-bottom: 1.2rem;
+        transition: all 200ms ease-in;
+        position:relative;
+        &:first-child{
+            margin-bottom: 2rem;
+        }
+         &::before{
+            content: attr(data-tooltip);
+            position: absolute;
+            left: 4rem;
+            top: -1.2rem;
+            background:transparent;
+            width:100%;
+            font-size:12px;
+            font-weight:bold;
+            line-height: 1.4;
+            color: black;
+            padding: 1.3rem;
+            border-radius: var(--radius);
+            transition: all 200ms ease-in;
+            opacity: 0;
+        }
+        &:hover::before{
+            opacity: 1;
+            left: 4.5rem;
+        }
+        svg{
+            fill: rgb(10, 1, 34);
+            width: 2.8rem;
+            height: 2rem;
+            transition: all 200ms ease-in;
+            &:hover{
+                fill: #64203e;
+            }
+        }
+        a{
+            color: rgb(10, 8, 8);
+            text-decoration: none;
+            font-weight: bold;
+            .nav-itemlabel{
+                position: relative;
+                top: -4px;
+                font-size: 14px;
+            }
+            .space{
+                height:14px;
+            }
+        }
+    }
+}
+.nav-closed {
+    .nav-list{
+        transform: translate(0px);
+        transition: transform 400ms ease-in-out;
+    }
+}
+@media screen and (max-width:768px){
+    .nav-expand{
+        display: flex;
+        width: 2rem;
+        height: 2rem;
+        fill: darkgray;
+        background-color: white;
+        box-shadow: 0px 0px 10px lightblue;
+        border-radius: 50%;
+        position: absolute;
+        right: -1rem;
+        top: 7rem;
+        z-index: 99;
+        cursor: pointer;
+        transition: transform 400ms ease-in-out;
+    }
+    .nav-list{
+        transform: translate(-60px);
+    }
+    .nav-closed {
+            .nav-expand{
+            transform: rotateZ(180deg);
+        }
+    }
+}
+

@@ -1,0 +1,62 @@
+@import '../variables.scss';
+.welcome-box{
+    grid-area: welcome;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 3rem;
+    height: 30rem;
+    .welcome-text-login,.welcome-text-signup{ 
+        font-family: "Lobster",cursive;
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 0;
+        text-align: center;
+        line-height: 1.4;
+        letter-spacing: 2px;
+        margin-right: 1.2rem;
+        margin-bottom: 1rem;
+        .accent-text{
+            color: $pink-text;
+        }
+    }
+    #worldDataimg{
+        width: 24rem;
+        height: 18rem;
+    }
+}
+@media (min-width:320px) and (max-width:480px){
+    .welcome-box{
+        flex-direction: column;
+        margin-top: 8rem;
+        margin-bottom: 4rem;
+        #worldDataimg{
+            width: 80%;  
+            height: 60%;
+        }
+        .welcome-text-login,.welcome-text-signup{
+            font-family: "Lobster",cursive;
+            font-size: 2rem;
+            height: 100%;
+        }
+        .welcome-text-login,.welcome-text-signup{
+            margin-top: 3rem;
+        }
+    }
+}
+@media (min-width:481px) and (max-width:768px){
+    .welcome-box{
+        flex-direction: column;
+        #worldDataimg{
+            width: 80%;  
+            height: 60%;
+        }
+        .welcome-text-login,.welcome-text-signup{
+            margin-top: 12rem;
+            height: 100%;
+           
+        }
+    }
+}

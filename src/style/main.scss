@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@700&display=swap');
+@import './variables';
+@import './mixins';
+@import './AllPage/NavBar.scss';
+@import './AllPage/TopFlags.scss';
+@import './FirstPage/Login.scss';
+@import './FirstPage/FirstPage.scss';
+@import './FirstPage/WelcomeContent.scss';
+@import './FirstPage/DidYouKnow.scss';
+@import './FirstPage/SignUp.scss';
+@import './AllPage/Footer.scss';
+@import './Home/MyHomePage.scss';
+@import './Home/HiModal.scss';  
+@import './Menu/Countries.scss';
+@import './Menu/Pagination.scss';
+@import './Menu/Country.scss';
+@import './Menu/CompareCountries.scss';
+@import './Menu/CompareItem.scss';
+@import './Menu/RegionalBlocks.scss';
+@import './Menu/Flags.scss';
+@import './Menu/Map.scss';
+@import './Menu/Profile.scss';
+@import './Menu/FlagModal.scss';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

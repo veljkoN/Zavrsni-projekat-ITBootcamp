@@ -1,0 +1,39 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-image:linear-gradient(rgb(253, 239, 242),pink);
+    background-repeat: no-repeat;
+    
+}
+.container{
+    height: 168vh;
+    max-width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "welcome welcome welcome welcome welcome welcome"
+    "fourImages fourImages fourImages fourImages fourImages fourImages"
+    "didYouKnow didYouKnow didYouKnow didYouKnow didYouKnow didYouKnow"
+    ;
+}
+@media (min-width:320px) and (max-width:480px){
+    .container{
+        height: 350vh;
+    }
+}
+@media (min-width:481px) and (max-width:768px){
+    .container{
+        height: 370vh;
+    }
+}
+@media (min-width:768px) and (max-width:1400px){
+    .container{
+        height: 290vh;
+    }
+}
+@media (min-width:1301px){
+    .container{
+        height: 250vh;
+    }
+}

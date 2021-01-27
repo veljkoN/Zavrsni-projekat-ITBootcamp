@@ -1,0 +1,104 @@
+@import '../variables.scss';
+.signUp-box{
+    border-radius: 3px;
+    padding: 4rem 3rem 2rem 3rem;
+    background: linear-gradient(#b2f5f3,#f5c2ca);
+    position: relative;
+    h2{
+        font-weight: lighter;
+        color: $l-coral;
+        background-color: transparent;
+        font-size:30px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        top: -2rem;
+        left:0;
+    }
+    svg{
+        fill:rgb(153, 80, 80) ;
+    }
+    p{
+        text-align: right;
+        vertical-align: center;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        text-decoration: underline;
+        color:$br-text;
+        cursor: pointer;
+    }
+    .signUp-form{
+        display: flex;
+        flex-direction: column;
+        .signUp-input{
+            width: 16rem;
+            height: 2rem;
+            background: rgb(248, 227, 227);
+            outline: none;
+            border: 0;
+            font-weight: lighter;
+            font-size: 14px;
+            margin-bottom: 10px;
+            border: 0px;
+           
+            &::placeholder{
+                color: rgb(56, 29, 56);
+                padding-left: 1rem;
+            }
+            &:focus{
+                background-color: white;
+                color:  rgb(56, 29, 56);
+            }
+        }
+        .signUp-btn{
+           @include btn
+        }
+    }
+    .error-box{
+        height: 3rem;
+        margin-top: 0.5rem;
+        width: 16rem;
+        .errorMessage{
+            color: red;
+            line-height: 1.6;
+            font-size: 14px;
+            .successLogin{
+                text-decoration: underline;
+                font-size: 1.2em;
+                cursor: pointer;
+            }
+        } 
+    }
+}
+@media (min-width:320px) and (max-width:480px){
+    .signUp-box{
+        border: none;
+        margin-top: 4rem;
+        margin-bottom: 7rem;
+        padding: 0;
+        h2{
+            font-size: 24px;
+        }
+        .signUp-form {
+            margin: 0 auto;
+            .signUp-input{
+                width: 14rem;
+                margin-left:1rem;
+            }
+            .signUp-btn{
+                width: 14rem;
+                margin-left:1rem;
+            }
+        }
+        p{
+            right: 32px;
+        }
+    }
+}
+@media (min-width:481px) and (max-width:768px){
+    .signUp-box{
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+    }
+}

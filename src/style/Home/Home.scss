@@ -1,0 +1,46 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(0deg, #fcecfc 0%, #f7f2f7 100%);
+}
+.home{
+    height: 100%;
+    position: relative;
+    .welcome-message{
+        font-family: "Lobster",cursive;
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 0;
+        text-align: center;
+        line-height: 1.4;
+        letter-spacing: 2px;
+        margin-right: 1.2rem;
+        margin-bottom: 1rem;
+        .accent-text{
+            color: #DC3A80;
+        }
+    }
+}
+.logout-btn{
+    background-image: linear-gradient(to right, rgb(245, 121, 121) 0%, #f8aac2  51%, lightcoral  100%);
+    width: 8rem;
+    height: 2rem;
+    font-size: 16px;
+    font-weight: lighter;
+    border: 0px; 
+    border-radius: 3px;
+    margin-top: 16px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee; 
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    &:hover{
+        background-position: right center; /* change the direction of the change here */
+        color: white;
+        text-decoration: none;
+    }
+}

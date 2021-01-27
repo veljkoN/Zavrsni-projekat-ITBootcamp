@@ -1,0 +1,18 @@
+.map-box{
+    height: 100vh;
+    max-width: 1200px;
+    margin: 5rem auto;
+}
+@media (min-width:481px) and (max-width:768px){
+   .map-box{
+    margin-right: 4rem;
+    width: 80%;
+   }
+}
+@media (min-width:769px) and (max-width:1500px){
+    .map-box{
+        height: 140vh;
+        margin-left: 9rem;
+        width: 80%;
+    }
+}

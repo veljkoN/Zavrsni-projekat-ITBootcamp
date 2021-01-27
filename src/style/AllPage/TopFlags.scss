@@ -1,0 +1,129 @@
+*{
+	margin: 0;
+	padding: 0; 
+	box-sizing: border-box;
+}
+.first-box{
+    position: relative;
+}
+.top-flegs{
+    position: relative;
+	display: flex;
+    overflow: hidden;
+    padding-top: 4px;
+    border-bottom: 1px solid #98f0ed;
+    background-color: #e7f7f6;
+    padding-bottom: 3px;
+    height: 19px;
+    z-index: 3;
+    img{
+        width: 25px;
+        height: 15px;
+        margin-right: 5px;
+        opacity: 0;
+        padding-bottom: 4px;
+        animation:showFlags 6s forwards;
+        &:first-child{
+            margin-left: 22px;
+        }
+    }
+    @keyframes showFlags{
+        from{
+            transform: translateY(-200px);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+.user{
+    z-index: 3;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    border: 3px solid rgb(83, 82, 82);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    svg{
+        padding: 0.1rem 0 0.1rem 0.2rem;
+        fill: rgb(83, 82, 82);
+        cursor: pointer;
+        &:hover{
+            fill: #64203e;
+        }
+    }
+}
+.user-profile{
+    z-index: 3;
+    position: absolute;
+    right: 1rem;
+    top: 6rem;
+    opacity: 0;
+    .profile-list{
+        background-color: lightpink;
+        border: 1px solid lightgray;
+        border-radius: 4%;
+        height: 3rem;
+        width: 6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:  2rem 4rem 2rem 3rem;
+        li{
+            cursor: pointer;
+            padding-top: 4px;
+           a{
+               text-decoration: none;
+               color: black;
+               &:hover{
+                color: rgb(92, 76, 76);
+               }
+               &:hover > .signout-img{
+                fill: rgb(92, 76, 76);
+               }
+           }
+           .signout-img{
+               fill: black;
+               position: absolute;
+               right:10px;
+               bottom: 7px;
+               padding-left: 0.3rem;
+           }
+        }
+        list-style: none;
+    }
+}
+.user-active{
+    opacity: 1;
+}
+.home-btn{
+    position: absolute;
+    left: 8rem;
+    top: 2.5rem;
+    z-index: 6;
+    svg{
+        cursor: pointer;
+        fill: rgb(83, 82, 82);
+        &:hover{
+            fill: #64203e;
+        }
+    }
+}
+@media (min-width:320px) and (max-width:480px){
+    .first-box{
+        .home-btn{
+            left: 4rem;
+        }
+    }
+}
+@media (min-width:481px) and (max-width:768px){
+    .first-box{
+        .home-btn{
+            left: 4rem;
+        }
+    }
+}

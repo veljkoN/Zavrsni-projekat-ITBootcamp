@@ -1,0 +1,15 @@
+.pagination{
+    display: flex;
+    li {
+        list-style: none;
+        margin-left: 2px; 
+        button{
+            border: 0;
+            &:hover{
+                cursor: pointer;
+                color: white;
+                background-color: #6c8685;
+            }
+        }
+    }
+}

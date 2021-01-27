@@ -1,0 +1,113 @@
+@import '../variables.scss';
+.compare-box{
+    max-width: 1220px;
+    height: 90vh;
+    padding: 4rem;
+    margin: 0 auto;
+    margin-left: 6rem;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-around;
+    position: relative; 
+    h2{ 
+        position: absolute;
+        top: -1rem;
+        margin-bottom: 1rem;
+        font-family: 'Amaranth', sans-serif;
+    }
+    p{
+        margin-bottom: 0.5rem;
+    }
+    .compare-item{
+        background-color: #a9c9c7;
+        box-shadow: 0px 3px 4px 0px $box-shadow;
+        border-radius: 3px;
+        padding:  2rem;
+        height: 13rem;
+        width: 24rem;
+        ul{
+            height: 6.5rem;
+            list-style: none;
+            li{
+               cursor: pointer;
+               &:hover{
+                   text-decoration: underline;
+               }
+            }
+        }
+    }
+    .compare-table{
+        z-index: 6;
+        background-image: url("../../images/chart\ 1.png");
+        background-repeat: no-repeat;
+        background-position: center top;
+        width: 28%;
+        height: 26rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h5{
+            margin: 3rem 0 1rem  0;
+        }
+        a{
+           text-decoration: none;
+            button{
+                margin-top: 2rem;
+                @include btn;
+                width: 8rem;
+            }
+        }
+    }
+}
+@media (min-width:320px) and (max-width:480px){
+    .compare-box{
+        padding: 2rem;
+        height: 126vh;
+        margin-left: 0;
+        flex-direction: column;
+        h2{
+            top: 1rem;
+        }
+        .compare-countries{
+            margin-top: 3rem;
+        }
+        .compare-item{
+            width:100%;
+            height: 13rem;
+        }
+        .compare-table{
+            width: 100%;
+            background-position: center right;
+            background-image: none;
+        }
+    }
+}
+@media (min-width:481px) and (max-width:768px){
+    .compare-box{
+        height: 125vh;
+        flex-direction: column;
+        .compare-item{
+            width: 16rem;
+        }
+        .compare-table{
+            width: 100%;
+            background-position: center right;
+        }
+        .compare-countries{
+            margin-top: 0rem;
+        }
+    }
+}
+@media (min-width:1400px){
+    .compare-box{
+        max-width: 1220px;
+        height: 90vh;
+        padding: 4rem;
+        margin: 0 auto;
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+    }
+}

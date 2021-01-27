@@ -1,0 +1,21 @@
+@mixin btn {
+    background-image: linear-gradient(to right, rgb(245, 121, 121) 0%, #f8aac2  51%, lightcoral  100%);
+    width: 16rem;
+    height: 2rem;
+    font-size: 16px;
+    font-weight: lighter;
+    border: 0px;
+    border-radius: 3px;
+    margin-top: 16px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    cursor: pointer;
+    display: block;
+    &:hover{
+        background-position: right center; /* change the direction of the change here */
+        color: white;
+        text-decoration: none;
+    }
+}

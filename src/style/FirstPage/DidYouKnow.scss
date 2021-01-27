@@ -1,0 +1,85 @@
+@import '../variables.scss';
+.didYouKnow{
+    grid-area: didYouKnow;
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+    margin-left: 3rem;
+    h1{
+        position: absolute;
+        text-align: center;
+        margin-top: 2rem; 
+    }
+    h2{
+       margin-top: 3rem;
+       margin-bottom: 1rem;
+    }
+    h4{
+        margin-bottom: 2rem;
+    }
+    .card{
+        background-color:white;
+        margin-top: 10rem;
+        width: 30%;
+        margin-right: 5px;
+        text-align: center;
+        overflow: hidden;
+        box-shadow: 0px 2px 20px lightgray;
+        border-radius: 0.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: transform 200ms ease-in;
+        .text-em{
+            color:$pink-text;
+        } 
+        &__description{
+            padding: 0 1rem;
+        }
+        &:hover{
+            transform: scale(1.02);
+        }
+    }
+} 
+@media (min-width:320px) and (max-width:480px){
+    .didYouKnow{
+        flex-direction: column;
+        margin-left: 0;
+        h1{
+            position: relative; 
+            top: 0px;
+            margin-bottom: 2rem;
+        }
+        .card{
+            background-color:white;
+            margin-top:0;
+            width:100%;
+            height:60%;
+            .card__body h4{
+                padding-top: 1rem;
+                padding-bottom: 0rem;
+            }
+        }
+    }
+}
+@media (min-width:481px) and (max-width:768px){
+    .didYouKnow{
+        flex-direction: column;
+        h1{
+            position: relative;
+            top: 0px;
+            margin-bottom: 2rem;
+        }
+        .card{
+            background-color:white;
+            margin-top:0;
+            width:100%;
+            height:60%;
+            .card__body h4{
+                padding-top: 1rem;
+                padding-bottom: 0rem;
+            }
+        }
+    }
+}

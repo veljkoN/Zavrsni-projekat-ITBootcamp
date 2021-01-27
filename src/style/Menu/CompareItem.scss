@@ -1,0 +1,35 @@
+.compare-item-box{
+  height: 200vh;
+  width:50%;
+  margin: 0 auto;
+  margin-top: 6rem;
+  table{
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    tr:nth-of-type(odd) { 
+      background: #eee; 
+    }
+    th { 
+      background: #333; 
+      color: white; 
+      font-weight: bold; 
+    }
+    td, th { 
+      padding: 6px; 
+      border: 1px solid #ccc; 
+      text-align: left; 
+    }
+  }
+}
+@media (min-width:320px) and (max-width:480px){
+  .compare-item-box{
+    height: 175vh;
+    width:80%;
+  }
+}
+@media (min-width:481px) and (max-width:768px){
+  .compare-item-box{
+      height: 175vh;
+      width:80%;
+  }
+}
